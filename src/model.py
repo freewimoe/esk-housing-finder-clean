@@ -11,8 +11,8 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder
 from typing import Dict, List, Tuple, Optional
 import logging
 
-from .config import RANDOM_FOREST_PARAMS, TEST_SIZE, CV_FOLDS, NUMERIC_FEATURES
-from .preprocess import RealEstatePreprocessor
+from config import RANDOM_FOREST_PARAMS, TEST_SIZE, CV_FOLDS, NUMERIC_FEATURES
+from preprocess import RealEstatePreprocessor
 
 logger = logging.getLogger(__name__)
 

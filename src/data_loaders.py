@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Optional, Tuple, List
 import logging
 
-from .config import RAW_DATA_DIR, PROCESSED_DATA_DIR, SAMPLE_DATA_FILE, REQUIRED_COLUMNS
+from config import RAW_DATA_DIR, PROCESSED_DATA_DIR, SAMPLE_DATA_FILE, REQUIRED_COLUMNS
 
 logger = logging.getLogger(__name__)
 

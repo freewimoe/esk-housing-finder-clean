@@ -1,8 +1,8 @@
-import streamlit as st
-import pandas as pd
-import plotly.express as px
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
+from shared_imports import st, pd, px, go, make_subplots, load_sample_data, format_currency
+
+
+
+
 import os
 
 class EdaPage:

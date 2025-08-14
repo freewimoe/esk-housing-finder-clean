@@ -7,7 +7,7 @@ from typing import Dict, List, Tuple, Optional
 from sklearn.preprocessing import StandardScaler, LabelEncoder
 import logging
 
-from .config import NUMERIC_FEATURES, CATEGORICAL_FEATURES
+from config import NUMERIC_FEATURES, CATEGORICAL_FEATURES
 
 logger = logging.getLogger(__name__)
 
