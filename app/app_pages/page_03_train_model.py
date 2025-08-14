@@ -1,10 +1,46 @@
-﻿from shared_imports import (
-    st, pd, np, os, 
-    train_test_split, RandomForestRegressor, 
-    mean_absolute_error, r2_score, joblib,
-    load_sample_data, format_currency, format_percentage,
-    get_demo_model, create_model_info_display
-)
+﻿import streamlit as st
+import pandas as pd
+import numpy as np
+import os
+import sys
+
+# Add current directory to path for imports
+current_dir = os.path.dirname(os.path.abspath(__file__))
+if current_dir not in sys.path:
+    sys.path.insert(0, current_dir)
+
+try:
+    from shared_imports import (
+        train_test_split, RandomForestRegressor, 
+        mean_absolute_error, r2_score, joblib,
+        load_sample_data, format_currency, format_percentage,
+        get_demo_model, create_model_info_display
+    )
+except ImportError:
+    # Fallback imports
+    from sklearn.model_selection import train_test_split
+    from sklearn.ensemble import RandomForestRegressor
+    from sklearn.metrics import mean_absolute_error, r2_score
+    import joblib
+    
+    def load_sample_data():
+        return pd.DataFrame({
+            'price': [300000, 400000, 500000],
+            'sqft': [1200, 1500, 2000],
+            'bedrooms': [2, 3, 4]
+        })
+    
+    def format_currency(amount):
+        return f"${amount:,.2f}"
+    
+    def format_percentage(value):
+        return f"{value:.1%}"
+    
+    def get_demo_model():
+        return RandomForestRegressor(n_estimators=100, random_state=42)
+    
+    def create_model_info_display():
+        return "Model info display"
 
 class TrainModelPage:
     @staticmethod
