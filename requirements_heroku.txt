@@ -1,0 +1,29 @@
+# Core ML and Data Science - ESSENTIAL ONLY
+streamlit>=1.47.0
+pandas>=2.3.0
+numpy>=2.1.0
+scikit-learn>=1.7.0
+joblib>=1.5.0
+
+# Visualization - STREAMLINED
+plotly>=6.1.0
+matplotlib>=3.7.0
+
+# Statistics - FOR PLOTLY TRENDLINES
+statsmodels>=0.14.0
+
+# Basic utilities
+requests>=2.31.0
+python-dateutil>=2.8.2
+
+# Remove heavy packages for production:
+# seaborn (included in matplotlib)
+# folium (geospatial - not needed for basic ML)
+# geopandas (geospatial - not needed)
+# geopy (geospatial - not needed)
+# beautifulsoup4 (web scraping - not needed)
+# python-dotenv (environment - not critical)
+# xgboost (extra ML - not needed for basic demo)
+# lightgbm (extra ML - not needed for basic demo)
+# optuna (hyperparameter tuning - not needed for demo)
+# pydantic (validation - not critical for demo)
