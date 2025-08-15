@@ -48,6 +48,12 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *.cover
+
+# Personal documentation and chat logs
+docs/personal/
+**/claude-chat*.docx
+**/chat-verlauf*.docx
+**/personal-notes*.docx
 *.py,cover
 .hypothesis/
 .pytest_cache/
