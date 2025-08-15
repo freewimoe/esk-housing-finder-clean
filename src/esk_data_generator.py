@@ -248,7 +248,11 @@ class ESKHousingDataGenerator:
             
             # Baujahr (ESK-Familien bevorzugen moderne Immobilien)
             if budget_level in ['senior_level', 'executive']:
-                year_built = np.random.choice(range(1990, 2025), p=np.linspace(0.01, 0.1, 35))
+                # Normalisierte Wahrscheinlichkeiten für neuere Immobilien
+                years = list(range(1990, 2025))
+                probs = np.linspace(0.01, 0.1, len(years))
+                probs = probs / probs.sum()  # Normalisierung
+                year_built = np.random.choice(years, p=probs)
             else:
                 year_built = np.random.choice(range(1970, 2025))
             
