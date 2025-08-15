@@ -13,3 +13,7 @@ statsmodels>=0.14.0
 # Basic utilities
 requests>=2.31.0
 python-dateutil>=2.8.2
+
+# ESK Housing App specific
+folium>=0.14.0
+streamlit-folium>=0.13.0
